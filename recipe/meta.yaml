@@ -10,8 +10,8 @@ package:
 source:
   fn: hexbin_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/hexbin_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/hexbin/hexbin_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/hexbin_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/hexbin/hexbin_{{ version }}.tar.gz
   sha256: 075935a3ae2d90e44aca6ebbd368dc6f7e59d322e36e0e0932dedbf01330ad08
 
 
