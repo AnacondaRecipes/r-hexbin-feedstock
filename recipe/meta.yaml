@@ -1,4 +1,4 @@
-{% set version = '1.27.1' %}
+{% set version = '1.27.2' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hexbin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hexbin/hexbin_{{ version }}.tar.gz
-  sha256: 075935a3ae2d90e44aca6ebbd368dc6f7e59d322e36e0e0932dedbf01330ad08
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 46d47b1efef75d6f126af686a4dd614228b60418b9a5bde9e9e5d11200a0ee52
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
-  number: 4
-
+  number: 0
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -63,8 +57,7 @@ test:
 about:
   home: http://github.com/edzer/hexbin
   license: GPL-2
-  summary: Binning and plotting functions for hexagonal bins. Now uses and relies on grid graphics
-    and formal (S4) classes and methods.
+  summary: Binning and plotting functions for hexagonal bins.
   license_family: GPL2
 
 extra:
@@ -76,22 +69,21 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: hexbin
-# Version: 1.27.1
-# Date: 2015-08-19
+# Version: 1.27.2
 # Title: Hexagonal Binning Routines
 # Author: Dan Carr <dcarr@voxel.galaxy.gmu.edu>, ported by Nicholas Lewin-Koh and Martin Maechler <maechler@stat.math.ethz.ch>, contains copies of lattice functions written by Deepayan Sarkar  <deepayan.sarkar@r-project.org>
 # Maintainer: Edzer Pebesma <edzer.pebesma@uni-muenster.de>
-# Depends: R (>= 2.10), methods
+# Depends: R (>= 2.0.1), methods
 # Imports: lattice, grid, graphics, grDevices, stats, utils
 # Suggests: marray, affy, Biobase, limma
-# Description: Binning and plotting functions for hexagonal bins. Now uses and relies on grid graphics and formal (S4) classes and methods.
+# Description: Binning and plotting functions for hexagonal bins.
 # Collate: lattice.R BTC.R BTY.R grid.hexagons.R grid.hexlegend.R hbox.R hdiffplot.R hexbinList.R hexbinplot.R hexbin.s4.R hexpanel.R hexplom.R hexPlotMA.R hexutil.R hexViewport.R HO.R LINGRAY.R LOCS.R MAG.R RB.R smoothHexbin.R
 # License: GPL-2
 # NeedsCompilation: yes
 # URL: http://github.com/edzer/hexbin
-# Packaged: 2016-12-05 14:59:04 UTC; hornik
+# Packaged: 2018-01-15 16:56:46 UTC; edzer
 # Repository: CRAN
-# Date/Publication: 2016-12-05 18:28:47
+# Date/Publication: 2018-01-15 18:56:40 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
