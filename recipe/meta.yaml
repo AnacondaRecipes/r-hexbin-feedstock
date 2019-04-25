@@ -61,6 +61,7 @@ about:
   license: GPL-2
   summary: Binning and plotting functions for hexagonal bins.
   license_family: GPL2
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
